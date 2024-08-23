@@ -3,31 +3,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        float NPA;
-        float NP3;
+        Aluno aluno = new Aluno();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Entre com a NPA: ");
-        NPA = sc.nextFloat();
+        aluno.nome = "Luiz";
+        aluno.matricula = 1845;
+        aluno.periodo = 6;
 
-        if (NPA > 60){
-            System.out.println("Aprovado");
-        }else if (NPA < 30){
-            System.out.println("Reprovado");
-        }else {
-            System.out.println("Digite a nota da NP3: ");
-            NP3 = sc.nextFloat();
+        System.out.println("Entre com a NP1: ");
+        aluno.NP1 = sc.nextInt();
+        System.out.println("Entre com a NP2: ");
+        aluno.NP2 = sc.nextInt();
 
-            NPA = (NP3 + NPA)/2;
-
-            if(NPA > 50){
-                System.out.println("Aprovado");
-            }
-            else if (NPA < 50){
-                System.out.println("Reprovado");
-            }
-        }
-
+        aluno.calculaMedia();
+        System.out.println(aluno.toString());
 
     }
 }
